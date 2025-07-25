@@ -13,19 +13,20 @@ const About = () => {
           </div>
 
           {/* Left Content Section */}
-          <div className="space-y-6  ">
+          <div className="space-y-6  w-full">
             {/* Main Heading */}
             <h1 className="text-5xl max-xl:text-3xl max-lg:text-center  font-bold text-gray-800 leading-tight">
-              Leading Global
-              <br />
-              <span className="text-yellow-500">Builder And Developer</span>
+              We Don’t Just Build <br />
+              We Define Standards
             </h1>
 
             {/* Description */}
             <p className="text-gray-600 text-lg leading-relaxed">
-              After more than twenty years of success in the wood products
-              industry, the Bilder family founded its capital venture in 2005
-              investing in real estate in the western United States.
+              At Muraad Construction, we bring over 9 years of hands-on
+              experience in the construction industry. From residential homes to
+              large-scale commercial developments, we’ve built a reputation for
+              delivering high-quality craftsmanship, on-time delivery, and
+              unmatched customer service.
             </p>
 
             {/* Services List */}
@@ -76,8 +77,6 @@ const About = () => {
 
             {/* Contact Section */}
             <div className="flex items-center space-x-6">
-            
-
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />

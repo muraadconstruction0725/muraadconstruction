@@ -144,7 +144,7 @@ const ContactUs = () => {
             <div className="space-y-6">
               {/* Phone */}
               <div className="flex items-center space-x-4">
-                <div className="w-12 max-lg:w-15 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                <div className="w-14 max-lg:w-15 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div className="w-full">
@@ -208,7 +208,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold">GST Number</h3>
-                  <p className="text-gray-300">123xxxxxxxxx</p>
+                  <p className="text-gray-300">22DOWPK2393B3ZT</p>
                 </div>
               </div>
                {/* Location */}
@@ -218,7 +218,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold">PWD Registration Number</h3>
-                  <p className="text-gray-300">123xxxxxxxxx</p>
+                  <p className="text-gray-300">CGeR26247</p>
                 </div>
               </div>
               

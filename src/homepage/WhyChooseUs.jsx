@@ -8,28 +8,28 @@ const WhyChooseUs = () => {
       icon: <Shield className="w-8 h-8" />,
       title: "Healthy & Safety",
       description:
-        "After more than twenty years of success in the wood products industry, the bilder family founded",
+        "We prioritize the well-being of our team and clients by adhering to the highest safety standards on every job site.",
     },
     {
       id: "02",
       icon: <Globe className="w-8 h-8" />,
       title: "Experience & Quality",
       description:
-        "After more than twenty years of success in the wood products industry, the bilder family founded",
+        "With over two decades of construction experience, our craftsmanship is second to none. ",
     },
     {
       id: "03",
       icon: <Briefcase className="w-8 h-8" />,
       title: "Professional Ethics",
       description:
-        "After more than twenty years of success in the wood products industry, the bilder family founded",
+        "Integrity, transparency, and accountability are at the core of everything we do.",
     },
     {
       id: "04",
       icon: <Leaf className="w-8 h-8" />,
       title: "Environmental",
       description:
-        "After more than twenty years of success in the wood products industry, the bilder family founded",
+        "We’re committed to sustainable building practices that reduce waste, conserve energy, and protect our environment. ",
     },
   ];
 
@@ -72,7 +72,7 @@ const WhyChooseUs = () => {
               <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
                 Why You Choose
                 <br />
-                <span className="text-yellow-500">The Muraad Construction</span>
+                <span className="text-yellow-500">Muraad Construction</span>
               </h1>
 
               <p className=" text-lg leading-relaxed">

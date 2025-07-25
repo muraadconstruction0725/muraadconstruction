@@ -22,6 +22,17 @@ const Navbar = () => {
     }
   };
 
+
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/details.pdf"; // relative to public/
+  link.download = "Muraad_Construction_Quote.pdf"; // you can customize the filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
   return (
     <nav className="bg-gray-900 text-white fixed z-50 w-full">
       {/* Top contact bar */}
@@ -115,7 +126,7 @@ const Navbar = () => {
           {/* Search and CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <button
-              onClick={() => handleNavClick("quote")}
+              onClick={handleDownload}
               className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded transition-colors flex items-center"
             >
               Get a Quote

@@ -8,6 +8,8 @@ import WhyChooseUs from './WhyChooseUs'
 import ContactUs from './ContactUs'
 import Testimonials from './Testimonials'
 import OurProjects from './OurProjects'
+import ServiceGallery from './ServiceGallery'
+import Plan from './Plan'
 
 export default function Homepage() {
   return (
@@ -18,7 +20,9 @@ export default function Homepage() {
       <Services/>
       <WhyChooseUs/>
       <OurProjects/>
-      {/* <Testimonials/> */}
+      <ServiceGallery/>
+      {/* <Plan/> */}
+      <Testimonials/>
       <ContactUs/>
       <Footer/>
     </div>

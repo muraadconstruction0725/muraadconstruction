@@ -78,7 +78,7 @@ const Footer = () => {
                 <span className="text-2xl font-bold text-yellow-500">Muraad Construction</span>
               </div>
               <p className=" mb-6 leading-relaxed">
-                Building dreams with precision and excellence. Over 20 years of experience in construction and architectural solutions.
+                Building dreams with precision and excellence. Over 9 years of experience in construction and architectural solutions.
               </p>
                {/* Social Links & CTA */}
           <div className="border-t border-gray-700 pt-2">

@@ -56,7 +56,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-800 text-white relative overflow-hidden pt-14">
+    <footer className="bg-[#2c3e50] text-white relative overflow-hidden pt-14">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-32 h-32 border-2 border-orange-500 rotate-45"></div>
@@ -183,7 +183,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className=" bg-[#2c3e50] py-8 w-full">
+        <div className=" bg-[#2c3e50] py-8 w-full border-t border-gray-300">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center text-sm text-gray-400">
               <div className="mb-2 md:mb-0 ">

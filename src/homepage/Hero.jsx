@@ -205,7 +205,7 @@ const section = document.getElementById(path);
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-[1200px] w-full mx-auto px-4 py-20">
+        <div className="relative z-10 max-w-[1280px] w-full mx-auto px-4 py-20">
           <div className="gap-12 items-center flex justify-center flex-col">
             {/* Left Content */}
             <div className="text-white space-y-8 w-full max-w-[1180px]">

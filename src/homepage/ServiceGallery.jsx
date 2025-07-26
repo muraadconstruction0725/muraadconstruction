@@ -104,12 +104,12 @@ const MediaItem = ({ item }) => {
           loading="lazy"
         />
       )}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+      {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
         <h3 className="text-white text-xl font-semibold tracking-tight">
           {item.alt}
         </h3>
         {isVideo && <span className="text-white/80 text-sm">📹 Video</span>}
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -124,7 +124,7 @@ const ServiceGallery = () => {
       items: [
         {
           id: 1,
-          url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360540/structurevideo1_e6cdkv.mp4",
+          url: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360529/structure8_gj0p3j.jpg",
           alt: "Foundation Work Video",
           type: "video",
         },
@@ -146,6 +146,31 @@ const ServiceGallery = () => {
           alt: "Steel Framework",
           type: "image",
         },
+        {
+          id: 5,
+          url: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360529/structure6_tryhff.jpg",
+          alt: "Steel Framework",
+          type: "image",
+        },
+        {
+          id: 6,
+          url: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360530/structure9_bevsfd.jpg",
+          alt: "Steel Framework",
+          type: "image",
+        },
+        {
+          id: 7,
+          url: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360529/structure7_mcucn2.jpg",
+          alt: "Steel Framework",
+          type: "image",
+        },
+        {
+          id: 8,
+          url: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360529/structure5_gqovrr.jpg",
+          alt: "Steel Framework",
+          type: "image",
+        },
+        
       ],
     },
     "Finishing Works": {
@@ -277,11 +302,11 @@ const ServiceGallery = () => {
             className="bg-white rounded-2xl shadow-2xl overflow-hidden"
             id={serviceName.replace(/\s+/g, "-").toLowerCase()}
           >
-            <div className="px-8 max-lg:px-4 py-5">
+            <div className="px-8 max-lg:px-4 py-5 max-lg:text-center">
               <h2 className="text-4xl font-bold tracking-wide mb-2">
                 {serviceName}
               </h2>
-              <p className="text-lg w-xl max-lg:w-full relative">{data.description}</p>
+              <p className="text-lg w-xl max-lg:w-full relative ">{data.description}</p>
             </div>
 
             <div className="p-8 max-xl:p-4 max-lg:py-8 relative group">

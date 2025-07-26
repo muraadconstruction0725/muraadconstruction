@@ -21,12 +21,20 @@ const Footer = () => {
     'Finishing Works',
     'Renovation Work',
     'Elevation Work',
-
+    'Interior Designing Work'
   ];
 
   const quickLinks = [
     'About Us',
     'Our Projects',
+    'Services',
+    'Testimonials',
+    'Contact'
+  ];
+
+   const sectionLinks = [
+    'About',
+    'Projects',
     'Services',
     'Testimonials',
     'Contact'
@@ -100,13 +108,13 @@ const Footer = () => {
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <a 
-                      href="#" 
+                    <p 
+                        onClick={() => handleNavClick("services")}
                       className=" hover:text-orange-400 transition-colors flex items-center group"
                     >
                       <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-transform"></span>
                       {service}
-                    </a>
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -119,7 +127,7 @@ const Footer = () => {
                 {quickLinks.map((link, index) => (
                   <li key={index}>
                     <a 
-                     onClick={() => handleNavClick(link.replace(/\s+/g, '').toLowerCase())}
+                     onClick={() => handleNavClick(sectionLinks[index].toLowerCase())}
                       className=" hover:text-orange-400 transition-colors flex items-center group"
                     >
                       <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-transform"></span>

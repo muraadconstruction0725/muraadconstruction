@@ -3,35 +3,36 @@ import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaUserCircle } from "react-icons/fa";
 
 // Sample data
 const testimonials = [
   {
-    name: "Alice Johnson",
+    name: "Sheikhazhar Sultan",
     role: "CEO, TechNova",
     testimonial:
-      "This product transformed our workflow. It's fast, reliable, and incredibly easy to use!",
+      "Time me complete karne aur acha kam karne ka shukrja",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
-    name: "Mark Davis",
+    name: "Madhu Netam",
     role: "CTO, CloudMetrics",
     testimonial:
-      "Outstanding support and clean code. Definitely one of the best decisions we've made.",
+      "Fast complition and good quality aswell",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
-    name: "Sarah Lee",
+    name: "Azlaan Ali",
     role: "Product Manager, DevHub",
     testimonial:
-      "A game-changer for our team. The UI is intuitive and the performance is top-notch.",
+      "Quality work thanks for the dream house",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
   },
   {
-    name: "John Smith",
+    name: "Dinesh Kumar Sinha",
     role: "Designer, PixelCraft",
     testimonial:
-      "Beautiful UI and smooth interactions. This tool made my job easier and faster!",
+      "amazing Quality work",
     image: "https://randomuser.me/api/portraits/men/45.jpg",
   },
 ];
@@ -89,18 +90,14 @@ const Testimonials = () => {
               <div key={index} className="px-3">
                 <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 h-full">
                   <div className="flex flex-col items-center text-center">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-20 h-20 rounded-full object-cover mb-4 shadow-sm"
-                    />
+                    <FaUserCircle size={50} className="text-gray-500"/>
                     <p className="text-gray-600 italic mb-4 leading-relaxed">
                       “{item.testimonial}”
                     </p>
                     <h4 className="font-semibold text-lg text-gray-800">
                       {item.name}
                     </h4>
-                    <p className="text-sm text-gray-500">{item.role}</p>
+                    {/* <p className="text-sm text-gray-500">{item.role}</p> */}
                   </div>
                 </div>
               </div>

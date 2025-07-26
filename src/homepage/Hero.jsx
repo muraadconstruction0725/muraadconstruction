@@ -23,7 +23,7 @@ const Hero = () => {
   const heroSlides = [
     {
       image:
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360465/hero1_rnkju8.jpg",
       title: "Building Tomorrow, Today",
       subtitle: "Premium Construction Services",
       description:
@@ -31,7 +31,7 @@ const Hero = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80",
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753508621/2151589592_bnvzvi.jpg",
       title: "Excellence in Every Project",
       subtitle: "Quality Construction & Renovation",
       description:
@@ -39,7 +39,7 @@ const Hero = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=2067&q=80",
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753508955/2151317232_zzqgrl.jpg",
       title: "Your Vision, Our Expertise",
       subtitle: "Trusted Construction Partner",
       description:
@@ -170,6 +170,13 @@ const Hero = () => {
     }
   };
 
+  const handleScrollClick = (path) => {
+const section = document.getElementById(path);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <>
       <section
@@ -198,7 +205,7 @@ const Hero = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl w-full mx-auto px-4 py-20">
+        <div className="relative z-10 max-w-[1200px] w-full mx-auto px-4 py-20">
           <div className="gap-12 items-center flex justify-center flex-col">
             {/* Left Content */}
             <div className="text-white space-y-8 w-full max-w-[1180px]">
@@ -224,7 +231,7 @@ const Hero = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <button onClick={() => handleScrollClick("contact")} className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Build With Us
                   <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>

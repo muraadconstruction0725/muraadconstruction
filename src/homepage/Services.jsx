@@ -2,13 +2,15 @@ import React from "react";
 
 // Using placeholder images since we can't access your assets
 const service1 =
-  "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop";
+  "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360466/service1_wipwm1.jpg";
 const service2 =
-  "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop";
+  "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360466/service2_e19a6d.jpg";
 const service3 =
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop";
+  "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753510326/108541_nddlcq.jpg";
 const service4 =
-  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=300&fit=crop";
+  "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753510458/elevation5_hbqjgm.jpg";
+const service5 =
+  "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753510684/3d-rendering-modern-dining-room-living-room-with-luxury-decor_clgcaq.jpg";
 
 const services = [
   {
@@ -54,7 +56,7 @@ const services = [
     description:
       "Creative and customized interior designing services to transform your spaces with modern aesthetics, functional layouts, premium materials, and expert craftsmanship.",
     price: "Starting from ₹500/sqft",
-    image: service4,
+    image: service5,
     viewimages: "interior-designing-work"
   },
   
@@ -91,7 +93,7 @@ export default function ServiceCards() {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-58 object-cover"
                 />
 
                 {/* Number Tag */}

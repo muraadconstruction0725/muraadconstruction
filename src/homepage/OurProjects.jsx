@@ -26,7 +26,7 @@ const OurProjects = () => {
       title: "Structure",
       location: "Spotswood, NJ",
       type: "Starting from ₹775/sqft",
-      image: project1,
+      image: project5,
       bgColor: "from-blue-500 to-blue-700",
     },
     {
@@ -42,7 +42,7 @@ const OurProjects = () => {
       title: "Renovation ",
       location: "Spotswood, NJ",
       type: "Starting from ₹5 lakh",
-      image: project3,
+      image: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360466/service2_e19a6d.jpg",
       bgColor: "from-blue-400 to-blue-600",
     },
     {
@@ -50,7 +50,7 @@ const OurProjects = () => {
       title: "Elevation ",
       location: "Spotswood, NJ",
       type: "Starting from ₹500/sqft",
-      image: project4,
+      image: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360467/elevation4_dyif1l.jpg",
       bgColor: "from-cyan-400 to-cyan-600",
     },
     {
@@ -58,7 +58,7 @@ const OurProjects = () => {
       title: "Interior ",
       location: "Spotswood, NJ",
       type: "Starting from ₹500/sqft",
-      image: project5,
+      image: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360518/Interior7_wwtrom.jpg",
       bgColor: "from-gray-500 to-gray-700",
     },
   ];

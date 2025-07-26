@@ -46,22 +46,13 @@ const WhyChooseUs = () => {
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                   backgroundImage:
-                    "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')",
+                    "url('https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360464/project5_fjfopj.jpg')",
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               </div>
 
-              {/* Bottom Image - Construction Site */}
-              <div
-                className="absolute bottom-0 left-0 w-full h-1/2 bg-cover bg-center rounded-bl-3xl"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')",
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
+             
             </div>
           </div>
 

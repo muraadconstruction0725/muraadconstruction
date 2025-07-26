@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
       icon: <Globe className="w-8 h-8" />,
       title: "Experience & Quality",
       description:
-        "With over two decades of construction experience, our craftsmanship is second to none. ",
+        "With over nine years of construction experience, our craftsmanship is second to none. ",
     },
     {
       id: "03",

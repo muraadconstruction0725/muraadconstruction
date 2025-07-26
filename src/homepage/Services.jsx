@@ -37,7 +37,7 @@ const services = [
     description: `We offer expert renovation services for both residential and commercial properties.
       Our services include interior redesign, and modernization
       of old spaces using high-quality materials`,
-    price: "Starting from ₹5 lakh",
+    price: "Starting from ₹500/sqft",
     image: service3,
     viewimages: "renovation-work"
   },
@@ -55,7 +55,7 @@ const services = [
     title: "Interior Designing Work",
     description:
       "Creative and customized interior designing services to transform your spaces with modern aesthetics, functional layouts, premium materials, and expert craftsmanship.",
-    price: "Starting from ₹500/sqft",
+    price: "Starting from ₹5 lakh",
     image: service5,
     viewimages: "interior-designing-work"
   },

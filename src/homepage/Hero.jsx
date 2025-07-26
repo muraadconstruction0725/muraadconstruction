@@ -53,77 +53,77 @@ const Hero = () => {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360540/structurevideo1_e6cdkv.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Modern Villa Construction",
+      title: "Structure Work",
       duration: "3:45",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360544/structurevideo10_he5lmr.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Commercial Complex Project",
+      title: "Structure Work",
       duration: "5:20",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360546/structurevideo11_iobyv9.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Interior Design Showcase",
+      title: "Structure Work",
       duration: "2:30",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360552/structurevideo2_upzet6.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Infrastructure Development",
+      title: "Structure Work",
       duration: "4:15",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360542/structurevideo3_md58dz.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Renovation Transformation",
+      title: "Structure Work",
       duration: "3:10",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360544/structurevideo4_qd5ovx.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Luxury Home Building",
+      title: "Structure Work",
       duration: "6:00",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360548/structurevideo5_i5yqky.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Luxury Home Building",
+      title: "Structure Work",
       duration: "6:00",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360549/structurevideo6_n8drr1.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Luxury Home Building",
+      title: "Structure Work",
       duration: "6:00",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360553/structurevideo7_zvaxh5.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Luxury Home Building",
+      title: "Structure Work",
       duration: "6:00",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360547/structurevideo8_kad4fo.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Luxury Home Building",
+      title: "Structure Work",
       duration: "6:00",
     },
     {
       url: "https://res.cloudinary.com/dp3gufm2a/video/upload/v1753360550/structurevideo9_dmz1bi.mp4",
       thumbnail:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      title: "Luxury Home Building",
+      title: "Structure Work",
       duration: "6:00",
     },
   ];

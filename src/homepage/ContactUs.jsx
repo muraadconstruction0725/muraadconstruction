@@ -51,8 +51,8 @@ const ContactUs = () => {
           </h1> */}
 
           <p className="text-xl max-w-3xl mx-auto leading-relaxed max-lg:text-white">
-            Ready to transform your vision into reality? We're here to help
-            ambitious leaders shape the future with innovative solutions.
+            Your dream project begins with a conversation. Contact us today to
+            start building with confidence.
           </p>
         </div>
 
@@ -176,7 +176,12 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold">Email Us</h3>
-                  <a href="mailto:muraad.cons2808@gmail.com" className="text-gray-300">muraad.cons2808@gmail.com</a>
+                  <a
+                    href="mailto:muraad.cons2808@gmail.com"
+                    className="text-gray-300"
+                  >
+                    muraad.cons2808@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -201,7 +206,7 @@ const ContactUs = () => {
                   <p className="text-gray-300">Aman Nagar Mowa Raipur (C.G.)</p>
                 </div>
               </div>
-               {/* Location */}
+              {/* Location */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
                   <MdManageAccounts className="w-6 h-6 text-white" />
@@ -211,17 +216,18 @@ const ContactUs = () => {
                   <p className="text-gray-300">22DOWPK2393B3ZT</p>
                 </div>
               </div>
-               {/* Location */}
+              {/* Location */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
                   <MdAccountBalance className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold">PWD Registration Number</h3>
+                  <h3 className="text-white font-bold">
+                    PWD Registration Number
+                  </h3>
                   <p className="text-gray-300">CGeR26247</p>
                 </div>
               </div>
-              
             </div>
 
             {/* Additional Info */}

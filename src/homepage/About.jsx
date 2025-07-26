@@ -9,7 +9,7 @@ const About = () => {
         <div className="flex gap-10 items-center max-lg:flex-col">
           {/* Right Visual Section */}
           <div className="w-full ">
-            <img className="rounded-xl " src={about1} alt="" />
+            <img className="rounded-xl " src={"https://res.cloudinary.com/dp3gufm2a/image/upload/v1753519315/front-view-man-holding-construction-plan_zozphg.jpg"} alt="" />
           </div>
 
           {/* Left Content Section */}
@@ -40,13 +40,13 @@ const About = () => {
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                 <span className="text-gray-700 font-medium">
-                  Regularly Maintaining and organizing your Tools
+                 Committed to Quality Craftsmanship and Safety
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                 <span className="text-gray-700 font-medium">
-                  Regularly organizing and Maintaining your Tools
+                 Serving Residential and Commercial Clients
                 </span>
               </div>
             </div>
@@ -70,8 +70,9 @@ const About = () => {
               <p className="text-gray-700 mb-4">
                 We have multiple models of engagement:
                 <br />
-                We can work directly with individuals for private residences,
-                partner.
+                 Whether you're an individual building a private residence or a
+                business seeking a reliable partner—we're here to build with
+                you.
               </p>
             </div>
 

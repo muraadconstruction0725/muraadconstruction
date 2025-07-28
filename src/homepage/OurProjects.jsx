@@ -200,7 +200,7 @@ const OurProjects = () => {
                       <p className="text-white/90 text-sm mb-6">
                         {project.type}
                       </p>
-                      <button onClick={handleNavClick("contact")} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center">
+                      <button  onClick={() => handleNavClick("contact")} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center">
                         Contact Us
                         <svg
                           className="w-4 h-4 ml-2"

@@ -47,6 +47,11 @@ import Interior13 from "../assets/servicesgallery/Interior/Interior13.jpg";
 import Interior14 from "../assets/servicesgallery/Interior/Interior14.jpg";
 import Interior15 from "../assets/servicesgallery/Interior/Interior15.jpg";
 
+import renovation1 from "../assets/servicesgallery/renovation/renovation1.jpg";
+import renovation2 from "../assets/servicesgallery/renovation/renovation2.jpg";
+import renovation3 from "../assets/servicesgallery/renovation/renovation3.jpg";
+import renovation4 from "../assets/servicesgallery/renovation/renovation4.jpg";
+
 // Custom arrow components
 const PrevArrow = ({ onClick }) => (
   <button
@@ -235,13 +240,11 @@ const ServiceGallery = () => {
     "Renovation Work": {
       description: "Transform outdated spaces into modern, functional environments with our expert renovation service",
       items: [
-        { id: 1, url: Interior1, alt: "Living Room Design", type: "image" },
-        { id: 2, url: Interior2, alt: "Bedroom Design", type: "image" },
-        { id: 3, url: Interior3, alt: "Kitchen Design", type: "image" },
-        { id: 4, url: Interior4, alt: "Bathroom Design", type: "image" },
-        { id: 5, url: Interior5, alt: "Office Interior", type: "image" },
-        { id: 6, url: Interior6, alt: "Modern Interior", type: "image" },
-        { id: 7, url: Interior7, alt: "Living Room Design", type: "image" },
+      
+        { id: 1, url: renovation1, alt: "Renovation Project 1", type: "image" },
+        { id: 2, url: renovation2, alt: "Renovation Project 2", type: "image" },
+        { id: 3, url: renovation3, alt: "Renovation Project 3", type: "image" },
+        { id: 4, url: renovation4, alt: "Renovation Project 4", type: "image" },
       ],
     },
   };

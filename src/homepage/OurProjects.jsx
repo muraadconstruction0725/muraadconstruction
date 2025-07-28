@@ -137,13 +137,13 @@ const OurProjects = () => {
           {/* Left/Right Arrows */}
           <button
             onClick={() => scroll("left")}
-            className="absolute max-lg:block hidden -left-4 top-1/2 transform -translate-y-1/2 z-20 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-md"
+            className="absolute -left-4 top-1/2 transform -translate-y-1/2 z-20 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-md"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="absolute max-lg:block hidden -right-4 top-1/2 transform -translate-y-1/2 z-20 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-md"
+            className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-20 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-md"
           >
             <FaArrowRight />
           </button>
@@ -151,7 +151,7 @@ const OurProjects = () => {
           {/* Scrollable Cards */}
           <div
             ref={scrollRef}
-            className="flex justify-center overflow-scroll max-lg:justify-start items-center gap-6  pb-4 scrollbar-hide snap-x snap-mandatory
+            className="flex overflow-scroll justify-start items-center gap-6  pb-4 scrollbar-hide snap-x snap-mandatory
              scroll-smooth"
           >
             {projects.map((project, index) => (

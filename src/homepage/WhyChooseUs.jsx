@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="w-full bg-[#2c3e50] text-white py-16 px-6">
+    <div className="w-full bg-red-100  py-16 px-6">
       <div className="max-w-[1200px] w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Right Image Section */}
@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
                   className="flex items-start space-x-4 group"
                 >
                   {/* Icon Container */}
-                  <div className="flex-shrink-0 w-16 h-16 bg-orange-500/10 border border-orange-500/20 rounded-full flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <div className="flex-shrink-0 w-16 h-16 bg-orange-500/10 border  rounded-full flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                     {feature.icon}
                   </div>
 

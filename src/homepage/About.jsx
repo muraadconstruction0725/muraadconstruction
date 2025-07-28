@@ -9,7 +9,13 @@ const About = () => {
         <div className="flex gap-10 items-center max-lg:flex-col">
           {/* Right Visual Section */}
           <div className="w-full ">
-            <img className="rounded-xl " src={"https://res.cloudinary.com/dp3gufm2a/image/upload/v1753519315/front-view-man-holding-construction-plan_zozphg.jpg"} alt="" />
+            <img
+              className="rounded-xl "
+              src={
+                "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753519315/front-view-man-holding-construction-plan_zozphg.jpg"
+              }
+              alt=""
+            />
           </div>
 
           {/* Left Content Section */}
@@ -40,13 +46,13 @@ const About = () => {
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                 <span className="text-gray-700 font-medium">
-                 Committed to Quality Craftsmanship and Safety
+                  Committed to Quality Craftsmanship and Safety
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                 <span className="text-gray-700 font-medium">
-                 Serving Residential and Commercial Clients
+                  Serving Residential and Commercial Clients
                 </span>
               </div>
             </div>
@@ -64,13 +70,17 @@ const About = () => {
                   <p className="font-bold text-orange-500 text-lg">
                     Shahbaz Khan
                   </p>
-                  <p className="text-gray-500 text-sm">CEO & Founder</p>
+                   <span className="text-gray-500 text-sm">CEO & Founder</span>{" "} <br />
+                  <p className="text-gray-500 text-sm">
+                    M-Tech Civil Structure
+                  </p>
+                 
                 </div>
               </div>
               <p className="text-gray-700 mb-4">
                 We have multiple models of engagement:
                 <br />
-                 Whether you're an individual building a private residence or a
+                Whether you're an individual building a private residence or a
                 business seeking a reliable partner—we're here to build with
                 you.
               </p>

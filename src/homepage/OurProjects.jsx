@@ -19,6 +19,14 @@ const OurProjects = () => {
     }
   };
 
+    const handleNavClick = (path) => {
+    console.log(`Navigate to: ${path}`);
+    const section = document.getElementById(path);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const projects = [
     // your full project array here...
     {
@@ -42,7 +50,8 @@ const OurProjects = () => {
       title: "Renovation ",
       location: "Spotswood, NJ",
       type: "Starting from ₹500/sqft",
-      image: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360466/service2_e19a6d.jpg",
+      image:
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360466/service2_e19a6d.jpg",
       bgColor: "from-blue-400 to-blue-600",
     },
     {
@@ -50,7 +59,8 @@ const OurProjects = () => {
       title: "Elevation ",
       location: "Spotswood, NJ",
       type: "Starting from ₹500/sqft",
-      image: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360467/elevation4_dyif1l.jpg",
+      image:
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360467/elevation4_dyif1l.jpg",
       bgColor: "from-cyan-400 to-cyan-600",
     },
     {
@@ -58,7 +68,51 @@ const OurProjects = () => {
       title: "Interior ",
       location: "Spotswood, NJ",
       type: "Starting from ₹5 lakh",
-      image: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360518/Interior7_wwtrom.jpg",
+      image:
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360518/Interior7_wwtrom.jpg",
+      bgColor: "from-gray-500 to-gray-700",
+    },
+     {
+      id: 1,
+      title: "Structure",
+      location: "Spotswood, NJ",
+      type: "Starting from ₹775/sqft",
+      image: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360529/structure8_gj0p3j.jpg",
+      bgColor: "from-blue-500 to-blue-700",
+    },
+    {
+      id: 2,
+      title: "Finishing",
+      location: "Spotswood, NJ",
+      type: "Starting from ₹1,275/sqft",
+      image: "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360503/finishing7_ixjzt0.jpg",
+      bgColor: "from-gray-600 to-gray-800",
+    },
+    {
+      id: 3,
+      title: "Renovation ",
+      location: "Spotswood, NJ",
+      type: "Starting from ₹500/sqft",
+      image:
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360466/service2_e19a6d.jpg",
+      bgColor: "from-blue-400 to-blue-600",
+    },
+    {
+      id: 4,
+      title: "Elevation ",
+      location: "Spotswood, NJ",
+      type: "Starting from ₹500/sqft",
+      image:
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360467/elevation5_cqtpue.jpg",
+      bgColor: "from-cyan-400 to-cyan-600",
+    },
+    {
+      id: 5,
+      title: "Interior ",
+      location: "Spotswood, NJ",
+      type: "Starting from ₹5 lakh",
+      image:
+        "https://res.cloudinary.com/dp3gufm2a/image/upload/v1753360504/Interior10_qqthsu.jpg",
       bgColor: "from-gray-500 to-gray-700",
     },
   ];
@@ -97,7 +151,7 @@ const OurProjects = () => {
           {/* Scrollable Cards */}
           <div
             ref={scrollRef}
-            className="flex justify-center max-lg:overflow-hidden max-lg:justify-start items-center gap-6  pb-4 scrollbar-hide snap-x snap-mandatory
+            className="flex justify-center overflow-scroll max-lg:justify-start items-center gap-6  pb-4 scrollbar-hide snap-x snap-mandatory
              scroll-smooth"
           >
             {projects.map((project, index) => (
@@ -146,7 +200,7 @@ const OurProjects = () => {
                       <p className="text-white/90 text-sm mb-6">
                         {project.type}
                       </p>
-                      <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center">
+                      <button onClick={handleNavClick("contact")} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 flex items-center">
                         Contact Us
                         <svg
                           className="w-4 h-4 ml-2"
@@ -166,10 +220,15 @@ const OurProjects = () => {
                   </div>
                 </div>
 
-                {/* Vertical Text */}
-                <div className="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-90 origin-center">
-                  <span className="text-3xl group-hover:hidden text-white font-light tracking-widest whitespace-nowrap">
-                    {project.title.toUpperCase()}
+                {/* Vertical Text (normal characters, vertical layout) */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <span className="text-3xl group-hover:hidden text-white font-light tracking-widest leading-none flex flex-col items-center">
+                    {project.title
+                      .toUpperCase()
+                      .split("")
+                      .map((char, index) => (
+                        <span key={index}>{char}</span>
+                      ))}
                   </span>
                 </div>
               </div>

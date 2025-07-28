@@ -79,7 +79,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-16 px-4">
+    <section className="bg-gradient-to-b from-gray-50 to-white py-16 px-4" id="testimonials">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-12 text-gray-800">
           What Our Clients Say

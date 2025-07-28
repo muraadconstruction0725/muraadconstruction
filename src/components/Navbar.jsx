@@ -24,9 +24,9 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-gray-900 text-white fixed z-50 w-full">
+    <nav className="bg-red-100 text-black fixed z-50 w-full">
       {/* Top contact bar */}
-      <div className="bg-gray-800 px-4 py-2 max-lg:hidden">
+      <div className="bg-red-200 px-4 py-2 max-lg:hidden ">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center justify-center space-x-2">
             <span className="flex items-center">
@@ -68,14 +68,14 @@ const Navbar = () => {
       </div>
 
       {/* Main navbar */}
-      <div className="px-4 py-4">
+      <div className="px-4 py-4 shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <div
             className="flex items-center cursor-pointer"
             onClick={() => handleNavClick("/")}
           >
-            <span className="text-2xl font-bold">Muraad Construction</span>
+            <span className="text-2xl  font-bold">Muraad Construction</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -118,7 +118,7 @@ const Navbar = () => {
             <a
               href="/details.pdf"
               download={"Muraad Construction Quote"}
-              className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded transition-colors flex items-center"
+              className="bg-orange-500 text-white hover:bg-orange-600 px-6 py-2 rounded transition-colors flex items-center"
             >
               Get a Quote
               <span className="ml-2">
@@ -134,17 +134,17 @@ const Navbar = () => {
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
               <span
-                className={`bg-white block h-0.5 w-6 transition-all ${
+                className={`bg-black block h-0.5 w-6 transition-all ${
                   isMenuOpen ? "rotate-45 translate-y-1" : ""
                 }`}
               ></span>
               <span
-                className={`bg-white block h-0.5 w-6 mt-1 transition-all ${
+                className={`bg-black block h-0.5 w-6 mt-1 transition-all ${
                   isMenuOpen ? "opacity-0" : ""
                 }`}
               ></span>
               <span
-                className={`bg-white block h-0.5 w-6 mt-1 transition-all ${
+                className={`bg-black block h-0.5 w-6 mt-1 transition-all ${
                   isMenuOpen ? "-rotate-45 -translate-y-1" : ""
                 }`}
               ></span>
@@ -190,7 +190,7 @@ const Navbar = () => {
               <a
                 href="/details.pdf"
                 download={"Muraad Construction Quote"}
-                className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded transition-colors w-full text-left"
+                className="bg-orange-500 text-white hover:bg-orange-600 px-6 py-2 rounded transition-colors w-full text-left"
               >
                 Get a Quote ↗
               </a>

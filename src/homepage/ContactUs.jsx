@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { MdAccountBalance, MdManageAccounts } from "react-icons/md";
 
 const ContactUs = () => {
@@ -10,6 +10,9 @@ const ContactUs = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -17,22 +20,45 @@ const ContactUs = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      name: "",
-      mobile: "",
-      email: "",
-      message: "",
+    setLoading(true);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "YOUR_ACCESS_KEY", // <-- Replace this with your actual access key
+        name: formData.name,
+        phone: formData.mobile,
+        email: formData.email,
+        message: formData.message,
+      }),
     });
+
+    const result = await response.json();
+    setLoading(false);
+
+    if (result.success) {
+      setStatus("SUCCESS");
+      setFormData({
+        name: "",
+        mobile: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      setStatus("ERROR");
+    }
   };
 
   return (
-    <div className=" py-16 px-6 max-lg:px-0 " id="contact">
-      <div className="w-full max-w-[1200px]  mx-auto">
-        {/* Main Header */}
+    <div className="py-16 px-6 max-lg:px-0" id="contact">
+      <div className="w-full max-w-[1200px] mx-auto">
+        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-3 mb-6">
             <div className="w-16 h-0.5 bg-yellow-500"></div>
@@ -41,214 +67,142 @@ const ContactUs = () => {
             </span>
             <div className="w-16 h-0.5 bg-yellow-500"></div>
           </div>
-
-          {/* <h1 className="text-5xl lg:text-6xl font-bold  mb-6 leading-tight">
-            Let's Create Something
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-              Amazing Together
-            </span>
-          </h1> */}
-
-          <p className="text-xl max-w-3xl mx-auto leading-relaxed max-lg:">
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed">
             Your dream project begins with a conversation. Contact us today to
             start building with confidence.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  p-4 rounded-lg bg-red-100">
-          {/* Contact Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-4 rounded-lg bg-red-100">
+          {/* Form Section */}
           <div className="bg-red-300 rounded-xl p-4 px-8">
-            <h2 className="text-2xl font-bold  mb-6 ">
-              Send us a message
-            </h2>
-
-            <div className="space-y-4">
-              {/* Name Field */}
+            <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block  text-sm font-medium mb-2 ">
-                  Name *
-                </label>
+                <label className="block text-sm font-medium mb-2">Name *</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Your name"
-                  className="w-full bg-white border border-gray-600 rounded-lg px-4 py-2  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   required
+                  className="w-full bg-white border border-gray-600 rounded-lg px-4 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 />
               </div>
-
-              {/* Mobile Field */}
               <div>
-                <label className="block  text-sm font-medium mb-2 ">
-                  Phone *
-                </label>
+                <label className="block text-sm font-medium mb-2">Phone *</label>
                 <input
                   type="tel"
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleInputChange}
                   placeholder="Your phone number"
-                  className="w-full bg-white border border-gray-600 rounded-lg px-4 py-2  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   required
+                  className="w-full bg-white border border-gray-600 rounded-lg px-4 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 />
               </div>
-
-              {/* Email Field */}
               <div>
-                <label className="block  text-sm font-medium mb-2 ">
-                  Email *
-                </label>
+                <label className="block text-sm font-medium mb-2">Email *</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="your.email@example.com"
-                  className="w-full bg-white border border-gray-600 rounded-lg px-4 py-2  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   required
+                  className="w-full bg-white border border-gray-600 rounded-lg px-4 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
                 />
               </div>
-
-              {/* Message Field */}
               <div>
-                <label className="block  text-sm font-medium mb-2 ">
-                  Message
-                </label>
+                <label className="block text-sm font-medium mb-2">Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell us about your project..."
                   rows={4}
-                  className="w-full bg-white border border-gray-600 rounded-lg px-4 py-2  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                  className="w-full bg-white border border-gray-600 rounded-lg px-4 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
                 />
               </div>
-
-              {/* Submit Button */}
               <button
-                onClick={handleSubmit}
-                className="w-full  bg-orange-500 hover:bg-orange-600  font-semibold py-2 px-6 rounded-lg transition-colors duration-300"
+                type="submit"
+                disabled={loading}
+                className="w-full bg-orange-500 hover:bg-orange-600 font-semibold py-2 px-6 rounded-lg transition-colors duration-300"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
-            </div>
+              {status === "SUCCESS" && (
+                <p className="text-green-600 font-medium mt-2">
+                  Message sent successfully!
+                </p>
+              )}
+              {status === "ERROR" && (
+                <p className="text-red-600 font-medium mt-2">
+                  Something went wrong. Please try again.
+                </p>
+              )}
+            </form>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Info Section */}
           <div>
-            <h2 className="text-2xl font-bold  mb-6">Get in touch</h2>
-
+            <h2 className="text-2xl font-bold mb-6">Get in touch</h2>
             <div className="space-y-6">
-              {/* Phone */}
-              <div className="flex items-center space-x-4">
-                <div className="w-14 max-lg:w-15 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div className="w-full">
-                  <h3 className=" font-bold">Call Us</h3>
-                  <div className="flex gap-1 max-lg:flex-wrap ">
-                    <span className="flex items-center">
-                      <a
-                        href="tel:91-9617099998"
-                        className="flex justify-center items-center gap-1 "
-                      >
-                        {" "}
-                        91-9617099998,
-                      </a>
-                    </span>
-                    <span className="flex items-center ">
-                      <a href="tel:91-9926415706">91-9926415706,</a>
-                    </span>
-                    <span className="flex items-center ">
-                      <a href="tel:91-8103628472">91-8103628472</a>
-                    </span>
+              <ContactInfo
+                icon={<Phone className="w-6 h-6 text-white" />}
+                label="Call Us"
+                content={
+                  <div className="flex flex-wrap gap-2">
+                    <a href="tel:91-9617099998">91-9617099998,</a>
+                    <a href="tel:91-9926415706">91-9926415706,</a>
+                    <a href="tel:91-8103628472">91-8103628472</a>
                   </div>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-white " />
-                </div>
-                <div>
-                  <h3 className=" font-bold">Email Us</h3>
-                  <a
-                    href="mailto:muraad.cons2808@gmail.com"
-                    className=""
-                  >
-                    muraad.cons2808@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              {/* Hours */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-white " />
-                </div>
-                <div>
-                  <h3 className=" font-bold">Office Hours</h3>
-                  <p className="">Mon - Sat: 10:30 AM - 8:00 PM</p>
-                </div>
-              </div>
-
-              {/* Location */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-white " />
-                </div>
-                <div>
-                  <h3 className=" font-bold">Location</h3>
-                  <p className="">Aman Nagar Mowa Raipur (C.G.)</p>
-                </div>
-              </div>
-              {/* Location */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
-                  <MdManageAccounts className="w-6 h-6 text-white " />
-                </div>
-                <div>
-                  <h3 className=" font-bold">GST Number</h3>
-                  <p className="">22DOWPK2393B3ZT</p>
-                </div>
-              </div>
-              {/* Location */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
-                  <MdAccountBalance className="w-6 h-6 text-white " />
-                </div>
-                <div>
-                  <h3 className=" font-bold">
-                    PWD Registration Number
-                  </h3>
-                  <p className="">CGeR26247</p>
-                </div>
-              </div>
+                }
+              />
+              <ContactInfo
+                icon={<Mail className="w-6 h-6 text-white" />}
+                label="Email Us"
+                content={<a href="mailto:muraad.cons2808@gmail.com">muraad.cons2808@gmail.com</a>}
+              />
+              <ContactInfo
+                icon={<Clock className="w-6 h-6 text-white" />}
+                label="Office Hours"
+                content={<p>Mon - Sat: 10:30 AM - 8:00 PM</p>}
+              />
+              <ContactInfo
+                icon={<MapPin className="w-6 h-6 text-white" />}
+                label="Location"
+                content={<p>Aman Nagar Mowa Raipur (C.G.)</p>}
+              />
+              <ContactInfo
+                icon={<MdManageAccounts className="w-6 h-6 text-white" />}
+                label="GST Number"
+                content={<p>22DOWPK2393B3ZT</p>}
+              />
+              <ContactInfo
+                icon={<MdAccountBalance className="w-6 h-6 text-white" />}
+                label="PWD Registration Number"
+                content={<p>CGeR26247</p>}
+              />
             </div>
-
-            {/* Additional Info */}
-            {/* <div className="mt-8 p-6 bg-gray-800 rounded-lg">
-              <h3 className=" font-semibold mb-3 text-2xl">
-                Ready to start your project?
-              </h3>
-              <p className=" text-base mb-4">
-                Contact us today for a free consultation and let's discuss your
-                ideas.
-              </p>
-              <button className="bg-orange-500 hover:bg-orange-600  font-medium py-2 px-4 rounded-lg flex items-center space-x-2 transition-colors duration-300">
-                <span>Book Consultation</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div> */}
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+const ContactInfo = ({ icon, label, content }) => (
+  <div className="flex items-center space-x-4">
+    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+      {icon}
+    </div>
+    <div>
+      <h3 className="font-bold">{label}</h3>
+      {content}
+    </div>
+  </div>
+);
 
 export default ContactUs;
